@@ -33,6 +33,12 @@ const initializeDBandServer = async () => {
 
 initializeDBandServer();
 
+// Common Output
+
+app.get("/", (request, response) => {
+  response.send("Hiiii");
+});
+
 // API - 1: Register a new user
 app.post("/register/", async (request, response) => {
   const { username, password, name, gender } = request.body;
