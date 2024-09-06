@@ -2,7 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://spreetham-reddy.github.io/fdsfsf/",
+  })
+);
 
 const path = require("path");
 const dbPath = path.join(__dirname, "twitterClone.db");
